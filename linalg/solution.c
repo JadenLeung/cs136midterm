@@ -21,8 +21,28 @@ struct matrix{
 //   May modify matrix_product
 
 bool matrix_mult(const struct matrix * m1, const struct matrix * m2, struct matrix * matrix_product) {
-    // Here so that the code will compile.
-    return false;
+
+    // matrix multiplication condition
+    if (m1->width != m2->height){
+        return false;
+    } 
+
+    // MxN * NxO results in an MxO matrix 
+    matrix_product->height = m1->height;
+    matrix_product->width = m2->width;
+
+    for (int i = 0; i < m2->width; i++){
+        for (int j = 0; j < m1->height; j++){
+            int sum = 0;
+            for (int k = 0; k < m1->width; k++){
+                sum += (m1->values[(j * m1->width) + k] 
+                        * m2->values[((m2->width * k) + i)]);
+            }
+            matrix_product->values[(matrix_product->width * j) + i] = sum;
+        }
+    }
+
+    return true;
 }
 
 // print_matrix(m) prints out a matrix.
@@ -31,7 +51,7 @@ void print_matrix(struct matrix m){
     for (int i = 0; i < m.height; i++){
         printf("[ ");
         for (int j = 0; j < m.width; j++){
-            printf("%3d ", m.values[(m.width * i) + j] );
+            printf("%2d ", m.values[(m.width * i) + j] );
         }
         printf(" ]\n");
     }

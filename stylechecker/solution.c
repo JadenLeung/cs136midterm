@@ -62,10 +62,10 @@ bool space_check(const char *str) {
 // requires: str is a valid string
 bool uninitialized(const char *str) {
     int len = strlen(str);
-    if (str[len - 1] != ';') {
+    if (len == 0 || str[len - 1] != ';') {
         return true;
     }
-    
+
     for (int i = 0; i < len; ++i) {
         if (str[i] == '=') {
             return true;
@@ -73,13 +73,17 @@ bool uninitialized(const char *str) {
     }
 
     for (int i = 0; i < len; ++i) {
-        for (int j = 0; j < TYPES_LEN; ++j) {
-            const char *type = types[j];
-            if (starts_with(str, type)) {
-                return false;
-            }
+        if (str[0] == ' ') {
+            str++;
+        } else {
+            break;
         }
-        ++str;
+    }
+    
+    for (int i = 0; i < TYPES_LEN; ++i) {
+        if (starts_with(str, types[i])) {
+            return false;
+        }
     }
     return true;
 }

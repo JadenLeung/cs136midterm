@@ -1,0 +1,21 @@
+struct posn {
+    int a;
+    int b;
+}
+
+int main(void) {
+    int a;
+    // int b;
+    int* c;
+    int* d = 0;
+    struct posn e;
+    bool f;
+    print("g");
+    char h;
+    char i = 'a';
+}
+
+bool helper() {
+    return false;
+}
+

@@ -1,0 +1,19 @@
+int main(void) {
+    for (int i = 0; i < 5; ++i) {
+        if(true) { if(false) {
+            
+        }
+        }
+        do {
+
+        } while()
+        while(false) {
+
+        }
+    }
+    // eafawefeawhile()
+    // nif(true)
+    while(true) {
+
+    }
+}

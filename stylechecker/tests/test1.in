@@ -1,0 +1,9 @@
+int main(void) {
+    // AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+    int a;
+    int b = 5;
+    if(true) {
+        a = 5;
+    }
+    // if(true) while(false) for(true)
+}

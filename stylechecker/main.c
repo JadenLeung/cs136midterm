@@ -44,7 +44,7 @@ bool uninitialized(const char *str) {
 
 int main(void) {
     // Testing harness you don't have to worry about
-    char str[100];
+    char str[1000];
     int line = 1;
     while (fgets(str, sizeof(str), stdin) != NULL) {
         int len = strlen(str);

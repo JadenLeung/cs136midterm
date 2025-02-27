@@ -4,8 +4,8 @@
 #include <string.h>
 
 const int MAX_LEN = 80;
-const char *badspaces[5] = {"if(", "for(", "while(", "){", "}("};
-const int BADSPACES_LEN = 5;
+const char *badspaces[6] = {"if(", "for(", "while(", "){", "else{", "}else"};
+const int BADSPACES_LEN = 6;
 const char *types[4] = {"int", "char", "bool", "struct"};
 const int TYPES_LEN = 4;
 

@@ -4,12 +4,12 @@
 #include <string.h>
 
 const int MAX_LEN = 80;
-const char *badspaces[3] = {"if(", "for(", "while("};
-const int BADSPACES_LEN = 3;
+const char *badspaces[5] = {"if(", "for(", "while(", "){", "}("};
+const int BADSPACES_LEN = 5;
 const char *types[4] = {"int", "char", "bool", "struct"};
 const int TYPES_LEN = 4;
 
-// char_limit(str): Returns false if str goes over the character limit MAX_LEN
+// char_limit(str): Returns true if str is <= the character limit MAX_LEN
 // requires: str is a valid string
 bool char_limit(const char *str) {
     return true;
@@ -30,10 +30,11 @@ bool space_check(const char *str) {
 }
 
 // initialized(str): Returns false if str meets this criteria:
-//   After any initial whitespace, it starts with one of the types in ctypes
-//   Contains ;
-//   Does not contain = 
+//  1) After any initial whitespace, it starts with one of the types given by the types array
+//  2) Ends with ;
+//  3) Does not contain = 
 // examples: "     int a;" -> false
+//           "     int a; " -> true
 //           "int** a;" -> false
 //           "int a = 5;" -> true
 // requires: str is a valid string

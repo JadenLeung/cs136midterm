@@ -29,7 +29,7 @@ bool space_check(const char *str) {
     return true;
 }
 
-// uninitialized(str): Returns false if str meets this criteria:
+// initialized(str): Returns false if str meets this criteria:
 //   After any initial whitespace, it starts with one of the types in ctypes
 //   Contains ;
 //   Does not contain = 
@@ -37,7 +37,7 @@ bool space_check(const char *str) {
 //           "int** a;" -> false
 //           "int a = 5;" -> true
 // requires: str is a valid string
-bool uninitialized(const char *str) {
+bool initialized(const char *str) {
     return true;
 }
 
@@ -57,7 +57,7 @@ int main(void) {
         if (!space_check(str)) {
             printf("Missing whitespace on line %d\n", line);
         }
-        if (!uninitialized(str)) {
+        if (!initialized(str)) {
             printf("Uninitialized variable on line %d\n", line);
         }
         ++line;

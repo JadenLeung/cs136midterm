@@ -35,7 +35,7 @@ void one_v_one(struct player *a, struct player *b) {
     } else {
         temp[1] = 'u';
     }
-    // SNAPSHOT B
+    // SNAPSHOT C
     printf("%s vs %s\n", temp, b->name);
 }
 

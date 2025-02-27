@@ -25,7 +25,7 @@ void one_v_one(struct player *a, struct player *b) {
     a->name++;
     char temp[7] = {0};
     strcpy(temp, a->name);
-    temp[0] = 'S';
+    *temp = 'S';
     temp[3] = '\0';
     printf("%s vs %s\n", temp, b->name);
     // SNAPSHOT B
@@ -35,7 +35,7 @@ void one_v_one(struct player *a, struct player *b) {
     } else {
         temp[1] = 'u';
     }
-    // SNAPSHOT C
+    // SNAPSHOT B
     printf("%s vs %s\n", temp, b->name);
 }
 

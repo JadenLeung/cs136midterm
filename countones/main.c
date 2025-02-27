@@ -25,7 +25,4 @@ int main(void) {
     assert(count_ones(856) == 276);  
     assert(count_ones(1111) == 448); 
     //assert(count_ones(495827365) == 497521277); 
-    
-    
-
 }

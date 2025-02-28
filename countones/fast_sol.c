@@ -24,7 +24,7 @@ int power(int base, int e) {
 // count(2) <=> count_ones(99)
 // Given as count_ones(99) = |{91, 81, 71, 61, 51, 41, 31, 21, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 1}|
 int count(int digits) {
-  assert(digits > 0 )
+  assert(digits > 0);
   if (digits == 1) {
     return 1;
   }

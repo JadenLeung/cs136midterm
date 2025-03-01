@@ -27,7 +27,7 @@ bool matrix_mult(const struct matrix *m1, const struct matrix *m2,
 }
 
 // print_matrix(m) prints out a matrix.
-// effects: 
+// effects: Produces output
 void print_matrix(struct matrix m) {
     for (int i = 0; i < m.height; i++) {
         printf("[ ");

@@ -12,7 +12,7 @@
 //      (you will need an efficient solution)
 // Requires: n is non-negative 
 // Examples:    count_ones(4) => 1
-//              count_ones(12) = 6
+//              count_ones(12) = 5
 int count_ones(int n) {
     return 0; 
 }

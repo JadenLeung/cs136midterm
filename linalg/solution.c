@@ -32,7 +32,7 @@ bool matrix_mult(const struct matrix * m1, const struct matrix * m2, struct matr
     matrix_product->width = m2->width;
 
     for (int i = 0; i < m2->width; i++){
-        for (int j = 0; j < m1->height; j++){
+        for (int j = 0; j < m2->height; j++){
             int sum = 0;
             for (int k = 0; k < m1->width; k++){
                 sum += (m1->values[(j * m1->width) + k] 

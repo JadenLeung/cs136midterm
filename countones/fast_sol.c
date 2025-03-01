@@ -75,7 +75,7 @@ int count2(int first_digit, int other_digits, int digits) {
 //     in all non-negative integers less than or equal to n.
 // Requires: n is non-negative 
 // Examples:    count_ones(4) => 1
-//              count_ones(12) = 6
+//              count_ones(12) = 5
 int count_ones(int number) {
   
   if (number == 0) {

@@ -38,9 +38,9 @@ one_v_one:
 =================================== 
 main: 
   name:
-    [0]: 'L'
+    [0]: 'L' [addr_2]
     [1]: 'e'
-    [2]: 'S' [addr_2]
+    [2]: 'S' [addr_5]
     [3]: 'u'
     [4]: 'n'
     [5]: '\0'
@@ -49,7 +49,7 @@ main:
 
   storename: addr_2
   LEBRON: [addr_4]
-    .name: addr_2
+    .name: addr_5
     .fg2: 25
     .fg3: 40
    

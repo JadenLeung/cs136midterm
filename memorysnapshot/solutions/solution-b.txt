@@ -2,7 +2,7 @@
 
 GLOBAL DATA:
   BRONNY: [addr_3]
-    .name: addr_5
+    .name: addr_6
     .fg2: 37
     .fg3: 21
 
@@ -11,7 +11,7 @@ READ-ONLY DATA:
   POSSESSIONS: 20
 
   [0]: 'B' [addr_1]
-  [1]: 'r' [addr_5]
+  [1]: 'r' [addr_6]
   [2]: 'o'
   [3]: 'n'
   [4]: 'n'
